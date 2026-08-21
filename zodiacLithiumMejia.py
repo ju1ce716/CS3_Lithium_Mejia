@@ -5,10 +5,12 @@ try:
 except ValueError:
     print("Invalid input. Please enter a valid year.")
     raise SystemExit
+    
 #Validate that the year is not earlier than 1900
 if year < 1900:
     print("Invalid year. The year of birth must be 1900 or later.")
     raise SystemExit
+    
 #List chinese zodiac signs starting with Rat in 1900
 zodiac_signs = [
     "Rat (鼠 / Shǔ)",
@@ -24,7 +26,8 @@ zodiac_signs = [
     "Dog (狗 / Gǒu)",
     "Pig (猪 / Zhū)"
 ]
-#Determine the zodiac sign using the 12-year cycle then display result
+
+#Determine the zodiac sign using the 12-year cycle then print result
 zodiac_index = (year - 1900) % 12
 zodiac_sign = zodiac_signs[zodiac_index]
 print(f"Your Chinese zodiac sign is: {zodiac_sign}")
